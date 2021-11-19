@@ -248,7 +248,7 @@ void SX1276_77_78_79_LORA_Init(uint8_t nodeAddress, uint8_t broadcastAddress, ui
 	registersConfig.LoRaRegFifoRxBaseAddr = FIFO_RX_BASE_ADDR_LORA_DEFAULT;
 	registersConfig.LoRaRegIrqFlagsMask = L_RX_TIMEOUT_MASK | L_FHSS_CHANGE_CHANNEL_MASK | L_CAD_DETECTED_MASK; //setting this bit deactivate specific IRQ
 	registersConfig.LoRaRegModemConfig1 = L_BW_125_KHZ | L_CODING_RATE_4_5 | L_IMPLICIT_HEADER_MODE_ON_EXPLICIT;
-	registersConfig.LoRaRegModemConfig2 = L_SPREADING_FACTOR_12 | L_TX_CONTINUOUS_MODE_NORMAL_MODE | L_RX_PAYLOAD_CRC_ON_ENABLE;
+	registersConfig.LoRaRegModemConfig2 = spreadingFactor | L_TX_CONTINUOUS_MODE_NORMAL_MODE | L_RX_PAYLOAD_CRC_ON_ENABLE;
 	registersConfig.LoRaRegSymbTimeoutLsb = SYMBOL_TIMEOUT_LSB_LORA_DEFAULT;
 	registersConfig.LoRaRegPreambleMsb = PREAMBLE_LENGTH_MSB_LORA_DEFAULT;
 	registersConfig.LoRaRegPreambleLsb = PREAMBLE_LENGTH_LSB_LORA_DEFAULT;
